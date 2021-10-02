@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .wrapper{
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .box{
-            width: 200px;
-            height: 200px;
-            border: 2px solid black;
-        }
-    </style>
     <title>Playground</title>
 </head>
+<style>
+    .flexbox {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .square {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        margin: 5px 0px;
+        background-color: {{ color }};
+    }
+</style>
 <body>
-    <div class="wrapper">
-        {% for i in range(0,num) %}
-        <div class="box" style="background-color: {{color}};">
+    <div class=flexbox>
+        {% for i in range(num): %}
+        <div class = square>
         </div>
         {% endfor %}
     </div>
